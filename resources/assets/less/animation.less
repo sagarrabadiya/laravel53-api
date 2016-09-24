@@ -1,0 +1,75 @@
+@animationLessTime: 0.5s;
+@animationLessLocation: 'node_modules/animate.less/source';
+
+@import "@{animationLessLocation}/animated.less";
+
+@import "@{animationLessLocation}/fadeIn.less";
+@import "@{animationLessLocation}/fadeInDown.less";
+@import "@{animationLessLocation}/fadeInUp.less";
+@import "@{animationLessLocation}/fadeOutDown.less";
+@import "@{animationLessLocation}/fadeOutUp.less";
+@import "@{animationLessLocation}/fadeOut.less";
+
+.slide-enter {
+  .animated(0.4s);
+  .fadeInDown;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+}
+.slide-leave {
+  .animated(0.4s);
+  .fadeOutUp;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+}
+.navbar-transition {
+  transition: all 0.2s linear;
+  transform: translateX(0);
+}
+.navbar-enter, .navbar-leave {
+  transform: translateX(5px);
+}
+
+.viewSlide-enter {
+  .animated(0.2s);
+  .fadeInUp;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
+
+.viewSlide-leave {
+  .animated(0.4s);
+  .fadeOutDown;
+  animation-duration: 0.4s;
+  animation-iteration-count: 1;
+}
+
+.fade-enter {
+  .animated(0.2s);
+  .fadeIn;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
+.fade-leave {
+  .animated(0.2s);
+  .fadeOut;
+  animation-duration: 0.2s;
+  animation-iteration-count: 1;
+}
+
+
+// dropdown animation
+.dropdown {
+  .dropdown-menu {
+    .animated(0.5s);
+    .fadeOutDown;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+  &.open .dropdown-menu {
+    .animated(0.5s);
+    .fadeInUp;
+    animation-duration: 0.5s;
+    animation-iteration-count: 1;
+  }
+}

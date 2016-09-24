@@ -1,0 +1,8 @@
+api/*
+components/*
+constants/*
+directives/*
+mixins/*
+pages/*
+services/*
+vuex/*
